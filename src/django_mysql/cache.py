@@ -105,6 +105,12 @@ def get_reverse_key_func(
 
 class MySQLCache(BaseDatabaseCache):
 
+    # Types missing from django-stubs:
+    # https://github.com/typeddjango/django-stubs/pull/1117
+    _missing_key: object
+    _cull_frequency: int
+    _max_entries: int
+
     # Got an error with the add() query using BIGINT_UNSIGNED_MAX, so use a
     # value slightly 1 bit less (still an incalculable time into the future of
     # 1970)
